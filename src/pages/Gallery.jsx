@@ -30,12 +30,12 @@ const Gallery = () => {
         </div>
         <div className='flex items-center  md:mt-[50px] mt-[30px] gap-[40px] flex-wrap justify-center'>
           {
-            data && data.map((item) => (
+            data && data.map((item,index) => (
               <motion.div className=' w-[200px] md:w-[400px] md:h-[250px] rounded-[12px] overflow-hidden shadow-lg shadow-slate-40 hover:scale-110 transition'
                 initial={{y:-20,opacity:0}}
                 whileInView={{y:0,opacity:1}}
                 transition={{delay:0.1,duration:0.2}}
-              
+                key={index}
               
               >
                 <img src={item.imageurl} className='object-cover w-full h-full' />
