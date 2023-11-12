@@ -43,7 +43,6 @@ export default function Tabs({ques}) {
         'Round2': r2,
         'Round3': r3
     })
-    console.log(categories)
     return (
         <div className="w-full max-w-md md:px-2 py-16">
             <Tab.Group>
