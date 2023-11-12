@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,500&family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*
+{
+    font-family: 'DM Sans',sans-serif;
+}
+@layer utilities{
+    .stripped-li li:nth-child(even)
+    {
+        @apply bg-slate-100 px-[40px] py-[15px] flex items-center rounded-[5px]
+    }
+    .stripped-li li:nth-child(odd)
+    {
+        @apply bg-green-100 px-[40px] py-[15px] flex items-center rounded-[5px]
+    }
+}
+.active
+{
+    @apply relative
+}
+.active::after{
+    @apply content-[''] absolute h-[8px] w-[8px] bg-slate-300 bottom-[-10px] left-1/2 translate-x-[-50%] rounded-full transition-all animate-bounce
+}
+
+
+
+::-webkit-scrollbar{
+    display: none;
+}
