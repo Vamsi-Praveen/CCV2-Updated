@@ -32,7 +32,7 @@ const Announcement = () => {
                 >
                     <img src={announcement} className='md:h-[400px] object-cover w-full' />
                 </motion.div>
-                <div className='md:px-[40px] py-[30px] px-[20px]'>
+                <div className='md:px-[40px] py-[30px] px-[10px]'>
                     <motion.h1
                         initial={{ y: -50, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}

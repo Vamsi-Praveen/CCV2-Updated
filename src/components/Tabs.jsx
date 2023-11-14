@@ -8,7 +8,7 @@ function classNames(...classes) {
 }
 
 
-export default function Tabs({ques}) {
+export default function Tabs({ ques }) {
 
     //send the data by context to tabs 
     const { dataContext } = useData()
@@ -16,28 +16,24 @@ export default function Tabs({ques}) {
     const questions = ques
     // console.log(questions)
     const r1 = []
-    const r2 =[]
-    const r3=[]
-  if(questions)
-  {
-    questions.map((el)=>{
-        if(el.round=="1")
-        {
-            r1.push(el)
-        }
-        if(el.round=="2")
-        {
-            r2.push(el)
-        }
-        if(el.round=="3")
-        {
-            r3.push(el)
-        }
-    })
-  }
+    const r2 = []
+    const r3 = []
+    if (questions) {
+        questions.map((el) => {
+            if (el.round == "1") {
+                r1.push(el)
+            }
+            if (el.round == "2") {
+                r2.push(el)
+            }
+            if (el.round == "3") {
+                r3.push(el)
+            }
+        })
+    }
 
-    
-     
+
+
     let [categories] = useState({
         'Round1': r1,
         'Round2': r2,
